@@ -24,12 +24,12 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-name: Deploy to Amazon ECS
+name: Deploy to Amazon ECS by jwkims  # 이름 구분 추가 
 
 on:
   push:
     branches:
-      - jwkims
+      - jwkims    # 브랜치 추가 
 
 env:
   AWS_REGION: ap-northeast-2                   # set this to your preferred AWS region, e.g. us-west-1
