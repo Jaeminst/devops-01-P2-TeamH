@@ -24,12 +24,12 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-name: Deploy to ECS by seonghwan
+name: Deploy to ECS by dev-jaeminst
 
 on:
   push:
     branches:
-      - seonghwan
+      - dev-jaeminst
 
 env:
   AWS_REGION: ap-northeast-2                   # set this to your preferred AWS region, e.g. us-west-1
@@ -54,8 +54,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_SEONGHWANM}}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_SEONGHWANM}}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_JM }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_JM }}
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
