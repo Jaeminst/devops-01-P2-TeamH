@@ -25,8 +25,8 @@
 #    and best practices on handling the access key credentials.
 
 
+name: Deploy to Amazon ECS by jwkims  # 이름 구분 추가 # 안녕하세요 # 데브옵
 
-name: Deploy to Amazon ECS by jwkims  # 이름 구분 추가 # 안녕하세요 
 
 
 on:
