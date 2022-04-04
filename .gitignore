@@ -56,3 +56,9 @@ profile-*
 profile*
 *clinic*
 *flamegraph*
+
+# database example
+mongodb-data
+
+# environment
+.env
