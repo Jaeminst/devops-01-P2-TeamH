@@ -76,7 +76,7 @@ jobs:
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./server
         docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest   # 수정 
         docker push --all-tags $ECR_REGISTRY/$ECR_REPOSITORY     # 모든 태그 푸시 
-        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:latest"
 
 #     - name: Fill in the new image ID in the Amazon ECS task definition
 #       id: task-def
