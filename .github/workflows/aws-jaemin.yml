@@ -45,6 +45,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Generate Environment Variables File for Production
+      run: |
+        echo "MONGODB_ENDPOINT=$MONGODB_ENDPOINT" >> ./server/.env
+      env:
+        MONGODB_ENDPOINT: ${{ secrets.MONGODB_ENDPOINT }}
+
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:

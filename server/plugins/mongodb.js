@@ -8,6 +8,6 @@ module.exports = fp(async function (fastify, opts) {
   }
   fastify.register(require('fastify-mongodb'), {
     forceClose: true,
-    url: {ssm: MONGODB_ENDPOINT }
+    url: process.env.MONGODB_ENDPOINT
   })
 })
